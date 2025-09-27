@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(){
+    int P,T;
+    float R,CI,Final_amt;
+    scanf("%d%f%d", &P,&R,&T);
+    Final_amt = P*(pow((1+R/100),T));
+    CI = Final_amt-P;
+    printf("%.2f", CI);
+    return 0;
+}
