@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main (){
+    int x,n,Sum;
+    Sum = 0;
+    printf("Enter n = ");
+    scanf("%d", &n);
+    for(x=1;x<=n;x++){
+        Sum = Sum + x*x;
+             
+    }
+    printf("Sum = %d\t", Sum);
+    return 0;
+}
