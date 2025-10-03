@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main (){
+    int x,n,Product;
+    Product = 1;
+    printf("Enter n = ");
+    scanf("%d", &n);
+    for(x=1;x<=n;x++){
+        Product = Product*x;
+    }
+    printf("Product = %d\t", Product);
+    return 0;
+}
