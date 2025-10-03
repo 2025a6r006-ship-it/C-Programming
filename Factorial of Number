@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main (){
+    int x,n,Factorial;
+    Factorial = 1;
+    printf("Enter n = ");
+    scanf("%d", &n);
+    for(x=1;x<=n;x++){
+        Factorial = Factorial*x;
+    }
+    printf("Factorial = %d\t", Factorial);
+    return 0;
+}
