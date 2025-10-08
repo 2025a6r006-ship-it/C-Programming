@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int main() {
+    int N,x,max,n;
+    scanf("%d",&N);
+    max=INT_MIN;
+    for(x=1;x<=N;x++){
+        scanf("%d",&n);
+        if(n>max)
+            max=n;
+    }
+        printf("%d",max);
+    
+    return 0;
+}
