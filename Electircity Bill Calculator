@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int U;
+    float Total=0,Final=0;
+    scanf("%d", &U);
+    if(U<=50){
+    Total = U*0.50;
+    }
+    else if(U<=150){
+    Total = 0.50*50 + (U-50)*0.75;
+    }
+    else if(U<=250){
+    Total = 0.50*50 + 100*0.75 + ((U-150)*1.20);
+    }
+    else{
+    Total = 0.50*50 + 100*0.75 + 100*1.20 + (U-250)*1.50;
+    }
+    Final = (Total) + (0.20*Total);
+    printf("%.2f\n", Final);
+    return 0;
+}
