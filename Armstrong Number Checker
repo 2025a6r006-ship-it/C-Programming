@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,num=0,original,n=0,x;
+    scanf("%d",&N);
+    original=N;
+    x=N;
+    while(x!=0){
+        x=x/10;
+        n=n+1;
+    }
+    while(N!=0){
+        num=num+pow(N%10,n);
+        N=N/10;
+    }
+    if(num==original){
+        printf("Armstrong");
+    }
+    else{
+        printf("Not Armstrong");
+    }
+    return 0;
+}
