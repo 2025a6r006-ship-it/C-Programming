@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S[1000];
+    scanf("%[^\n]",S);
+    int vowelcount=0, consonantcount=0;
+    for(int i=0;S[i]!='\0';i++){
+        if (isalpha(S[i])){
+        char ch = toupper(S[i]);
+            if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U'){
+            vowelcount++;
+            }
+            else{
+            consonantcount++;
+            }
+        }
+    }
+        printf("%d %d", vowelcount,consonantcount);
+    return 0;
+}
