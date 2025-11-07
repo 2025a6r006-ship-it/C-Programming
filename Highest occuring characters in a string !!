@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S[1000];
+    scanf("%[^\n]",S);
+    int max=0, index=-1;
+    for(int i=0;S[i]!='\0';i++){
+        int count=0;
+        for(int j=0;S[j]!='\0';j++){
+            if(S[i]==S[j]){
+                count++;
+            }
+            if(count>max){
+                max = count;
+                index = i;
+            }
+        }
+    }
+    printf("%c occurs %d times", S[index],max);
+    return 0;
+}
