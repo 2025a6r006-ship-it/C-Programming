@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int factorial(int n){
+    int fac=1;
+    for(int i=1;i<=n;i++){
+        fac=fac*i;
+    }
+    return fac;
+}
+
+int main() {
+       int sum=0, n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        sum = sum + factorial(i);
+    }
+    printf("%d",sum);   
+    return 0;
+}
