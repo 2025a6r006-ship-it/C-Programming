@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int sumOfdigits(int num){
+    int static x=0;
+    if(num>0){
+      x=x+num%10;
+      sumOfdigits(num/10);
+    }
+    return x;
+}
+
+int main(){
+    int num;
+    scanf("%d",&num);
+    int a=sumOfdigits(num);
+    
+    printf("%d",a);
+    return 0;
+}
