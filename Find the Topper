@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+struct Topper{
+    int rollno;
+    char name[50];
+    struct Marks{
+        int mtscore;
+        int sciscore;
+        int engscore;
+        int comscore;
+    }mks;
+}stu[1000];
+
+int main() {
+    int N,max=0,total,index=-1;
+    scanf("%d",&N);
+    for(int i=0;i<N;i++){
+        scanf("%d ",&stu[i].rollno);
+        scanf("%[^\n]%*c",stu[i].name);
+        scanf("%d ",&stu[i].mks.mtscore);
+        scanf("%d ",&stu[i].mks.sciscore);
+        scanf("%d ",&stu[i].mks.engscore);
+        scanf("%d ",&stu[i].mks.comscore);
+    }
+    for(int i=0;i<N;i++){
+        total = stu[i].mks.mtscore+stu[i].mks.sciscore+stu[i].mks.engscore+stu[i].mks.comscore;
+        if(total>=max){
+            index=i;
+            max=total;
+        }
+    }
+    printf("Topper Details: \n");
+    printf("Roll No: %d\n",stu[index].rollno);
+    printf("Name: %s\n",stu[index].name);
+    printf("Total Marks: %d",max);
+    return 0;
+}
