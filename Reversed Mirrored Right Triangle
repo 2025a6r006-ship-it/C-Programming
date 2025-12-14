@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,r;
+    scanf("%d",&N);
+    for(r=1;r<=N;r++){
+        for(int c=1;c<=N-r;c++){
+            printf("  ");
+        }
+        for(int i=1;i<=r;i++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
