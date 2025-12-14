@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S[1000];
+    int uppercount=0,lowercount=0;
+    scanf("%[^\n]%*c",S);
+    for(int i=0;i<S[i];i++){
+        if(isalpha(S[i])){
+            if(S[i]>=65 && S[i]<=90){
+                uppercount++;
+            }
+        }
+    }
+    for(int i=0;i<S[i];i++){
+        if(isalpha(S[i])){
+            if(S[i]>=97 && S[i]<=122){
+                lowercount++;
+            }
+        }
+    }
+    printf("%d %d", uppercount,lowercount);
+    return 0;
+}
