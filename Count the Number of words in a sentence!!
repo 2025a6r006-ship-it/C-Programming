@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S[2000];
+    scanf("%[^\n]",S);
+    int count=0,inword=0;
+    for(int i=0;S[i]!='\0';i++){
+        if(!isspace(S[i])){
+            if(inword==0){
+             count++;
+             inword=1;
+            }
+        }
+            else{
+                inword=0;
+            }
+    }
+    printf("%d",count);
+    return 0;
+}
