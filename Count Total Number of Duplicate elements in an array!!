@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(){
+    int N,duplicate=0;
+    scanf("%d",&N);
+    
+    int a[N];
+    for(int i=0;i<N;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int i=0;i<N;i++){
+        int count=0;
+        for(int j=0;j<N;j++){
+            if(a[i]==a[j]){
+                count++;
+            }
+        }
+    
+      int alreadycount=0;
+     for(int k=0;k<i;k++){
+            if(a[k]==a[i]){
+                alreadycount=1;
+                break;
+            }
+     }
+    
+     if(count>1 && !alreadycount){
+        duplicate++;
+     }
+    }
+    
+    printf("%d",duplicate);
+    
+    return 0;
+}
