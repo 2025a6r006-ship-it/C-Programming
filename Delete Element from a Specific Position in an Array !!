@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int num;
+    scanf("%d",&num);
+    int arr[num];
+    for(int i=0;i<num;i++){
+        scanf("%d",&arr[i]);
+    }
+    int del;
+    scanf("%d",&del);
+    
+    if(del<1 || del>num){
+        printf("Invalid position");
+        return 0;
+    }
+    del--;
+    
+    for(int i=del+1;i<num;i++){
+        arr[i-1]=arr[i];
+    }
+    num--;
+    
+    for(int i=0;i<num;i++){
+        printf("%d ",arr[i]);
+    }
+    
+    return 0;
+}
