@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S[1000],RS[1000];
+    scanf("%[^\n]",S);
+    int k=0;
+    for(int i=strlen(S)-1;i>=0;i--){
+        RS[k++]=S[i];
+    }
+    RS[k]='\0';
+    printf("%s",RS);
+    return 0;
+}
