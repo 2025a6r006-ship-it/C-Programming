@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main() {
+    char S1[1000], S2[1000];
+    int k=0;
+    scanf("%[^\n]",S1);
+    for(int i=0;S1[i]!='\0';i++){
+        int flag=0;
+        for(int k=0;k<i;k++){
+            if(S1[i]==S1[k]){
+                flag=1;
+                break;
+            }
+        }
+        if(flag==0){
+            S2[k++] = S1[i];
+        }
+    }
+    S2[k]='\0';
+    printf(S2);
+    return 0;
+}
