@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char S[1001];
+    scanf("%[^\n]",S);
+    for(int i=0;S[i]!='\0';i++){
+        int count=0;
+        for(int j=0;S[j]!='\0';j++){
+            if(S[i]==S[j]){
+                count++;
+            }
+        }
+        if(count==1){
+            printf("%c",S[i]);
+            return 0;
+        }
+    }
+    printf("-1");
+    return 0;
+}
