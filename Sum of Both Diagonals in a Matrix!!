@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int r=n,c=n;
+    int arr[r][c];
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    int x=0;
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            if(i==j){
+                x+=arr[i][j];
+            }
+        }
+    }
+    printf("Sum of Primary Diagonal: %d\n",x);
+    int y=0;
+    for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            if(j==(n-1-i)){
+                y+=arr[i][j];
+            }
+        }
+    }
+    printf("Sum of Secondary Diagonal: %d\n",y);
+    int w;
+    if(n%2!=0){
+        w = x + y - arr[n/2][n/2];
+    }
+    else{
+        w=x+y;
+    }
+    printf("Total Sum of Both Diagonals: %d",w);
+    return 0;
+}
