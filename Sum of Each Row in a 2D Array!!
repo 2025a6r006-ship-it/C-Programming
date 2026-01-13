@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int R,C;
+    scanf("%d%d",&R,&C);
+    int stu[R][C];
+    for(int i=0;i<R;i++){
+        for(int j=0;j<C;j++){
+            scanf("%d ",&stu[i][j]);
+        }
+    }
+    for(int i=0;i<R;i++){
+        int sum=0;
+        for(int j=0;j<C;j++){
+            sum=sum+stu[i][j];
+        }
+        printf("%d\n",sum);
+    }
+    return 0;
+}
