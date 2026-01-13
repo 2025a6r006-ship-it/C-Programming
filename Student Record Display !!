@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+struct student{
+        int rollno;
+        char name[50];
+        char dept[100];
+        char grade[10];
+        char college[100];
+    };
+
+int main() {
+    struct student s;
+    scanf("%d ",&s.rollno);
+    scanf("%[^\n]%*c",s.name);
+    scanf("%[^\n]%*c",s.dept);
+    scanf("%[^\n]%*c",s.grade);
+    scanf("%[^\n]%*c",s.college);
+    
+    printf("Roll Number: %d\n",s.rollno);
+    printf("Name: %s\n",s.name);
+    printf("Branch: %s\n",s.dept);
+    printf("Section: %s\n", s.grade);
+    printf("College: %s",s.college);
+    return 0;
+}
